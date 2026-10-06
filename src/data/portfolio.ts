@@ -14,10 +14,12 @@ import cert7 from '../assets/images/blog/cert-7.png';
 import paideskLogo from '../assets/images/paidesk-logo.jpg';
 import teoLogo from '../assets/images/teo-logo.png';
 import personMain from '../assets/images/person2.jpg';
-import personAlt from '../assets/images/person-hover2.jpg';
+import personAlt from '../assets/images/person.jpg';
+import personHover from '../assets/images/person-hover2.jpg';
+import personHover2 from '../assets/images/person-hover.jpg';
 import logo from '../assets/logo.png';
 
-export { logo, personMain, personAlt };
+export { logo, personMain, personAlt, personHover, personHover2 };
 
 export const profile = {
   name: 'John Henry Osa',
