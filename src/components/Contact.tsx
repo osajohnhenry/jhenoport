@@ -143,7 +143,7 @@ export default function Contact() {
               </div>
               <div className="field">
                 <label htmlFor="subject">Subject</label>
-                <input id="subject" name="subject" required placeholder="Project inquiry" defaultValue="Project inquiry" />
+                <input id="subject" name="subject" required placeholder="Project inquiry" />
               </div>
               <div className="field">
                 <label htmlFor="message">Message</label>

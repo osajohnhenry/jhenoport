@@ -1,17 +1,19 @@
 import { motion } from 'framer-motion';
 import { Download, FolderKanban } from 'lucide-react';
-import { profile, skills, personAlt } from '../data/portfolio';
+import { profile, skills, personAlt, personHover } from '../data/portfolio';
+import { useDelayedHoverImage } from '../hooks/useDelayedHoverImage';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
 
 export default function About({ onNavigate }: { onNavigate: (id: string) => void }) {
+  const photo = useDelayedHoverImage(personAlt, personHover, { delay: 2000 });
   return (
     <section id="about" className="section-pad" style={{ paddingTop: 70 }}>
       <div className="container">
         <Reveal>
           <div className="about-card">
             <div className="about-photo">
-              <img src={personAlt} alt="John Henry Osa at work" loading="lazy" />
+              <img src={photo.src} alt="John Henry Osa at work" loading="lazy" onMouseEnter={photo.onMouseEnter} onMouseLeave={photo.onMouseLeave} />
               <div className="float">
                 Detail-oriented QA Analyst ensuring minimal issues reach production through
                 analytical testing and strong collaboration.

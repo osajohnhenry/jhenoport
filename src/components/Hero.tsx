@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, MapPin, ShieldCheck, Bug } from 'lucide-react';
-import { profile, stats, personMain } from '../data/portfolio';
+import { profile, stats, personMain, personHover } from '../data/portfolio';
+import { useDelayedHoverImage } from '../hooks/useDelayedHoverImage';
 
 function GithubIcon({ size = 19 }: { size?: number }) {
   return (
@@ -57,6 +58,7 @@ function useTypewriter(words: string[]) {
 
 export default function Hero({ onNavigate }: { onNavigate: (id: string) => void }) {
   const typed = useTypewriter(roles);
+  const photo = useDelayedHoverImage(personMain, personHover, { delay: 2000 });
 
   return (
     <section className="hero" id="home">
@@ -123,7 +125,7 @@ export default function Hero({ onNavigate }: { onNavigate: (id: string) => void 
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.15 }}
         >
-          <img className="hero-photo" src={personMain} alt="John Henry Osa" />
+          <img className="hero-photo" src={photo.src} alt="John Henry Osa" onMouseEnter={photo.onMouseEnter} onMouseLeave={photo.onMouseLeave} />
           <div className="hero-badge badge-tl">
             <span className="dot" />
             Open to QA roles
