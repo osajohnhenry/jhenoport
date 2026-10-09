@@ -1,18 +1,13 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Download, Sun, Moon } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { navItems, profile, logo } from '../data/portfolio';
-import type { Theme } from '../hooks/useTheme';
 
 export default function Navbar({
   active,
   onNavigate,
-  theme,
-  onToggleTheme,
 }: {
   active: string;
   onNavigate: (id: string) => void;
-  theme: Theme;
-  onToggleTheme: () => void;
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -53,14 +48,6 @@ export default function Navbar({
         </ul>
 
         <div className="nav-cta">
-          <button
-            className="theme-toggle"
-            onClick={onToggleTheme}
-            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            {theme === 'dark' ? <Sun size={19} /> : <Moon size={19} />}
-          </button>
           <a
             className="btn btn-primary"
             style={{ padding: '12px 20px' }}

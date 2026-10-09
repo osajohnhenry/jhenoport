@@ -11,10 +11,6 @@ export default function Footer({ onNavigate }: { onNavigate: (id: string) => voi
               <img src={logo} alt="logo" />
               John Henry<span style={{ color: '#60a5fa' }}>.</span>
             </div>
-            <p style={{ maxWidth: 360, fontSize: 14, lineHeight: 1.65, marginTop: 12 }}>
-              {profile.role} based in {profile.location}. Helping teams deliver
-              high-quality software through thoughtful manual testing.
-            </p>
           </div>
           <div className="footer-links">
             {navItems.map((n) => (
@@ -26,7 +22,6 @@ export default function Footer({ onNavigate }: { onNavigate: (id: string) => voi
         </div>
         <div className="footer-bottom">
           <span>© {year} {profile.name}. All rights reserved.</span>
-          <span>Built with React + Vite + TypeScript · Scroll animations with Framer Motion</span>
         </div>
       </div>
     </footer>

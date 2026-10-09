@@ -11,7 +11,6 @@ import Certifications from './components/Certifications';
 import Companies from './components/Companies';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { useTheme } from './hooks/useTheme';
 import { navItems } from './data/portfolio';
 
 const stripItems = [
@@ -30,7 +29,6 @@ const stripItems = [
 export default function App() {
   const [active, setActive] = useState('home');
   const [showTop, setShowTop] = useState(false);
-  const { theme, toggle } = useTheme();
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 28 });
 
@@ -66,7 +64,7 @@ export default function App() {
         <motion.div style={{ scaleX: progress }} />
       </div>
 
-      <Navbar active={active} onNavigate={scrollTo} theme={theme} onToggleTheme={toggle} />
+      <Navbar active={active} onNavigate={scrollTo} />
 
       <main>
         <Hero onNavigate={scrollTo} />
