@@ -136,7 +136,7 @@ export default function Hero({ onNavigate }: { onNavigate: (id: string) => void 
           </div>
         </motion.div>
       </div>
-      <div className="container" style={{ marginTop: 26, display: 'flex', gap: 8, alignItems: 'center', color: '#5b6b82', fontSize: 13.5, fontWeight: 600 }}>
+      <div className="container hero-location">
         <MapPin size={15} /> {profile.location}
       </div>
     </section>

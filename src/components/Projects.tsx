@@ -95,7 +95,7 @@ export default function Projects() {
                       <X size={18} />
                     </button>
                   </div>
-                  <p style={{ color: '#5b6b82', lineHeight: 1.65 }}>{selected.description}</p>
+                  <p style={{ color: 'var(--text-muted)', lineHeight: 1.65 }}>{selected.description}</p>
                   <h4 style={{ display: 'flex', gap: 8, alignItems: 'center', margin: '18px 0 4px' }}>
                     <ListChecks size={18} color="#2563eb" /> Testing conducted
                   </h4>

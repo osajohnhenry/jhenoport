@@ -18,8 +18,8 @@ export default function Companies() {
               <div className="company-card" key={c.name}>
                 <img src={c.src} alt={c.alt} loading="lazy" />
                 <div style={{ textAlign: 'left' }}>
-                  <div style={{ fontWeight: 800 }}>{c.name}</div>
-                  <div style={{ fontSize: 13, color: '#5b6b82' }}>QA Team</div>
+                  <div className="company-name">{c.name}</div>
+                  <div className="company-sub">QA Team</div>
                 </div>
               </div>
             ))}

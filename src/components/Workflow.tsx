@@ -52,8 +52,8 @@ export default function Workflow() {
                   <div className="step-icon">
                     <Icon size={22} />
                   </div>
-                  <div style={{ fontWeight: 800, fontSize: 17, marginBottom: 8 }}>{s.title}</div>
-                  <div style={{ color: '#5b6b82', fontSize: 14.5, lineHeight: 1.6 }}>{s.description}</div>
+                  <div className="step-title">{s.title}</div>
+                  <div className="step-desc">{s.description}</div>
                 </motion.div>
               );
             })}

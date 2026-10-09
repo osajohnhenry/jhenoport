@@ -9,7 +9,6 @@ export default function Certifications() {
       <div className="container">
         <SectionHeading
           center
-          dark
           eyebrow="Continuous learning"
           title="Online courses & certificates"
           sub="Here are the online courses I've completed as well as their respective digital certificates."

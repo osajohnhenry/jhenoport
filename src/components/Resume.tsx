@@ -6,7 +6,7 @@ import SectionHeading from './SectionHeading';
 
 export default function Resume() {
   return (
-    <section id="resume" className="section-pad" style={{ background: '#f6f8fc' }}>
+    <section id="resume" className="section-pad">
       <div className="container">
         <SectionHeading
           center
@@ -58,12 +58,12 @@ export default function Resume() {
               <div className="t-item" key={e.degree}>
                 <div className="t-role" style={{ fontSize: 14.5 }}>{e.degree}</div>
                 <div className="t-meta">{e.period} · {e.school}</div>
-                <p style={{ color: '#5b6b82', fontSize: 14.5, lineHeight: 1.6, margin: 0 }}>{e.detail}</p>
+                <p className="t-detail">{e.detail}</p>
               </div>
             ))}
-            <div style={{ marginTop: 22, background: '#f6f8fc', border: '1px solid #e6ecf5', borderRadius: 14, padding: 16 }}>
-              <div style={{ fontWeight: 800, fontSize: 14 }}>Currently</div>
-              <div style={{ color: '#5b6b82', fontSize: 14, lineHeight: 1.6 }}>
+            <div className="current-box">
+              <div className="current-box-title">Currently</div>
+              <div className="current-box-desc">
                 QA Analyst at Teøchnologies Inc., Pasay — focused on manual testing,
                 release readiness, and continuous QA process improvement.
               </div>
