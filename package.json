@@ -1,6 +1,7 @@
 {
   "name": "johnhenry-portfolio",
-  "description": "John Henry Osa — Software QA Analyst professional portfolio (React + Vite + TypeScript with scroll animations)",
+  "homepage": "https://osajohnhenry.github.io/jhenoport/",
+  "description": "John Henry Osa — Software QA Analyst professional portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +9,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
